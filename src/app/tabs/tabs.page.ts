@@ -5,6 +5,10 @@ import {
   IonTabButton,
   IonIcon,
   IonLabel,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonImg,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { triangle, ellipse, square, camera, images } from 'ionicons/icons';
@@ -14,7 +18,17 @@ import { triangle, ellipse, square, camera, images } from 'ionicons/icons';
   templateUrl: 'tabs.page.html',
   styleUrls: ['tabs.page.scss'],
   standalone: true,
-  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
+  imports: [
+    IonTabs,
+    IonTabBar,
+    IonTabButton,
+    IonIcon,
+    IonLabel,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonImg,
+  ],
 })
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
