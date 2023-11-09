@@ -11,7 +11,6 @@ import {
   IonRow,
   IonCol,
   IonImg,
-  
 } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { PhotoService } from '../services/photo.service';
@@ -35,11 +34,15 @@ import { NgFor } from '@angular/common';
     IonRow,
     IonCol,
     IonImg,
-    NgFor
+    NgFor,
   ],
 })
 export class Tab2Page {
   constructor(public photoService: PhotoService) {}
+
+  async ngOnInit() {
+    await this.photoService.loadSaved();
+  }
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
